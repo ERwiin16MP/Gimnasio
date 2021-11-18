@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/Referencia_Clase"
+    android:paddingVertical="8dp"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/TextView_NombreDeLaClase"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:text="Nombre de la clase: Clase ejemplo"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/TextView_Entrenador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView_NombreDeLaClase"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:text="Entrenador: Gloria Isabel"/>
+
+    <TextView
+        android:id="@+id/TextView_DiasDisponibles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView_Entrenador"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:text="Dias: Lunes, Martes, Miercoles"/>
+
+    <TextView
+        android:id="@+id/TextView_Hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView_DiasDisponibles"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:text="Hora: 01:00 p. m."/>
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Fondo"
+    tools:context=".ContratarClase">
+
+    <TextView
+        android:id="@+id/R1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Clases"/>
+
+    <TextView
+        android:id="@+id/R2"
+        android:layout_below="@id/R1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elige una clase: "
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/ListView_ListaClasesContratar"
+        android:layout_below="@+id/R2"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:background="@color/Azul"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

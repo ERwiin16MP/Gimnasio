@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/Fondo"
+    tools:context=".FormularioCliente">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/AdministrarCliente"/>
+
+    <TextView
+        android:id="@+id/TextView_FormularioCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SeleccionaUnCliente"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/R1"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/ListView_ListaClientes"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="80dp"/>
+
+    <ScrollView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ReferenciaNombreCompletoClienteFormulario"
+                android:layout_width="match_parent"
+                android:background="@drawable/blanco_redondo"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/NombreDelCliente">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/EditText_NombreCompletoClienteFormulario"
+                    android:textColor="@color/black"
+                    android:inputType="textCapWords"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ReferenciaCorreoClienteFormulario"
+                android:layout_width="match_parent"
+                android:background="@drawable/blanco_redondo"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/Correo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/EditText_CorreoClienteFormulario"
+                    android:textColor="@color/black"
+                    android:inputType="textEmailAddress"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ReferenciaTelefonoClienteFormulario"
+                android:layout_width="match_parent"
+                android:background="@drawable/blanco_redondo"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/Telefono">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/EditText_TelefonoClienteFormulario"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/ImageView_FotoClienteFormulario"
+                android:layout_marginTop="20dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/boton_redondo_azul"
+                android:scaleType="centerInside"
+                android:layout_marginHorizontal="20dp"
+                android:onClick="imagen"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ReferenciaContraseñaClienteFormulario"
+                android:layout_width="match_parent"
+                android:background="@drawable/blanco_redondo"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_gravity="center_vertical"
+                app:endIconMode="password_toggle"
+                android:hint="@string/Contraseña">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/EditText_ContraseñaClienteFormulario"
+                    android:textColor="@color/black"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ReferenciaContraseñaConfirmacionClienteFormulario"
+                android:layout_width="match_parent"
+                android:background="@drawable/blanco_redondo"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_gravity="center_vertical"
+                app:endIconMode="password_toggle"
+                android:hint="@string/ContraseñaConfirmacion">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/EditText_ContraseñaConfirmacionClienteFormulario"
+                    android:textColor="@color/black"
+                    android:inputType="textPassword"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <Button
+                    android:enabled="false"
+                    android:id="@+id/Boton_RegistrarClienteFormulario"
+                    android:background="@drawable/boton_redondo_verde_registar"
+                    android:text="@string/Registrar"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="registarClienteFormulario"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:visibility="invisible"
+                    android:enabled="false"
+                    android:id="@+id/Boton_ConsultarClienteFormulario"
+                    android:background="@drawable/boton_redondo_amarillo"
+                    android:text="@string/Consultar"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="consultarClienteFormulario"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="match_parent">
+                <Button
+                    android:enabled="false"
+                    android:id="@+id/Boton_EliminarClienteFormulario"
+                    android:onClick="eliminarClienteFormulario"
+                    android:background="@drawable/boton_redondo_rojo"
+                    android:textColor="@android:color/white"
+                    android:text="@string/Eliminar"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:enabled="false"
+                    android:id="@+id/Boton_ModificarClienteFormulario"
+                    android:background="@drawable/boton_redondo_azul"
+                    android:text="@string/Modificar"
+                    android:textColor="@android:color/white"
+                    android:onClick="modificarClienteFormulario"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

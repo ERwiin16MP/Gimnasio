@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/blanco_redondo.xml" value="0.2128205128205128" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/boton_redondo_amarillo.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/boton_redondo_amarillo_sin_borde.xml" value="0.2128205128205128" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/boton_redondo_azul.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/boton_redondo_rojo.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/boton_redondo_verde.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/boton_redondo_verde_registar.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/candado.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/correo.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/foto.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/subir_archivo.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/telefono.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/drawable/usuario.xml" value="0.21614583333333334" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/activity_main.xml" value="0.1859375" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/administrar_aparatos.xml" value="0.18611111111111112" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/administrar_clases.xml" value="0.2" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/administrar_cliente.xml" value="0.18055555555555555" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/contratar_clase.xml" value="0.25" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/elige_plan_de_pago.xml" value="0.25" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/formulario_aparato.xml" value="0.22" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/formulario_clase.xml" value="0.18981481481481483" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/formulario_cliente.xml" value="0.17777777777777778" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/item.xml" value="0.1859375" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/item_clase.xml" value="0.17777777777777778" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/login.xml" value="0.25" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/login_cliente.xml" value="0.175" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/login_personal.xml" value="0.25" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/menu_cliente.xml" value="0.1814814814814815" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/menu_personal.xml" value="0.18611111111111112" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/ogin_personal.xml" value="0.2" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/proporciona_tarjeta.xml" value="0.17777777777777778" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/quejas_sugerencias.xml" value="0.25" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/registrarse.xml" value="0.18611111111111112" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/rentar_aparatos.xml" value="0.33" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/mipmap-anydpi-v26/icono_round.xml" value="0.21614583333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
