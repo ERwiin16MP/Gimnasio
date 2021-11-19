@@ -1,9 +1,9 @@
 package com.pedba.gimnasiovalhalla;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class QuejasSugerencias extends AppCompatActivity {
 
