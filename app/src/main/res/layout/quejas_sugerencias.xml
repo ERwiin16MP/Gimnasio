@@ -90,17 +90,18 @@
                 android:layout_height="148dp"
                 android:gravity="bottom"
                 android:layout_gravity="center_vertical"
-                android:background="@android:color/white"
+                android:background="@drawable/blanco_redondo"
+                android:padding="5dp"
                 android:hint="@string/QuejasOSugerencias">
 
                 <EditText
                     android:id="@+id/EditText_QuejaOSugerencia"
                     android:layout_width="match_parent"
-                    android:inputType="textMultiLine"
+                    android:layout_height="match_parent"
                     android:gravity="top"
                     android:ems="10"
                     android:textColor="@color/black"
-                    android:layout_height="148dp"/>
+                    android:inputType="textCapSentences" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -110,10 +111,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:textColor="@android:color/white"
                 android:background="@drawable/boton_redondo_amarillo"
+                android:onClick="enviarQS"
                 android:text="@string/Enviar"
-                android:onClick="enviarQS"/>
+                android:textColor="@android:color/black" />
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
