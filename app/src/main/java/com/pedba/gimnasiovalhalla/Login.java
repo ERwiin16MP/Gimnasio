@@ -73,6 +73,8 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         inicializarVistas();
+        Id = "Erwin";
+        startActivity(new Intent(this, MenuCliente.class));
     }
 
     public void iniciarSesion(View view) {

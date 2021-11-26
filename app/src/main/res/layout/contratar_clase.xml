@@ -37,6 +37,5 @@
         android:layout_below="@+id/R2"
         android:layout_width="match_parent"
         android:layout_margin="20dp"
-        android:background="@color/Azul"
         android:layout_height="wrap_content"/>
 </RelativeLayout>

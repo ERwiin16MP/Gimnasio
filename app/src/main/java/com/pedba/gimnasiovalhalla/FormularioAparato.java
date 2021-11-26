@@ -81,8 +81,7 @@ public class FormularioAparato extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
                     Areas_Array = new String[(int) snapshot.getChildrenCount()];
-                    for (DataSnapshot i :
-                            snapshot.getChildren()) {
+                    for (DataSnapshot i : snapshot.getChildren()) {
                         Areas_Array[Contador] = i.child(NOM_AREA).getValue().toString();
                         Contador++;
                     }

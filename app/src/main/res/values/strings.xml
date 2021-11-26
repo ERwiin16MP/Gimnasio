@@ -103,9 +103,7 @@
     <string name="descripcion">Descripción</string>
     <string name="cantidad">Cantidad</string>
     <string name="area">Área:</string>
-    <string name="VerQuejas">Ver quejas y sugerencias</string>
+    <string name="VerQuejas">Quejas y sugerencias</string>
     <string name="Quejas">Quejas</string>
     <string name="Sugerencias">Sugerencias</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
