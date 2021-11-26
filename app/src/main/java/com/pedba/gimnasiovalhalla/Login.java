@@ -29,8 +29,11 @@ package com.pedba.gimnasiovalhalla;
 
 import static com.pedba.gimnasiovalhalla.Registrarse.CLIENTES;
 import static com.pedba.gimnasiovalhalla.Registrarse.CORREO_CLIENTE;
+import static com.pedba.gimnasiovalhalla.Registrarse.FOTO_CLIENTE;
+import static com.pedba.gimnasiovalhalla.Registrarse.ID_CLIENTE;
 import static com.pedba.gimnasiovalhalla.Registrarse.NOM_CLIENTE;
 import static com.pedba.gimnasiovalhalla.Registrarse.PASS_CLIENTE;
+import static com.pedba.gimnasiovalhalla.Registrarse.TEL_CLIENTE;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -38,6 +41,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -59,9 +63,10 @@ public class Login extends AppCompatActivity {
 
     private final FirebaseDatabase database = FirebaseDatabase.getInstance();
     private final DatabaseReference BaseDeDatosClientes = database.getReference(CLIENTES);
-    static ArrayList<Cliente> Clientes;
+    public static ArrayList<Cliente> Clientes;
     private EditText TextBox_Correo;
     private EditText TextBox_Contraseña;
+    public static String Id, Nombre, Correo, Foto, Telefono, Contraseña;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,19 +107,24 @@ public class Login extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
                     Clientes = new ArrayList<>();
-                    String Correo, Contraseña, Nombre;
                     for (DataSnapshot i : snapshot.getChildren()) {
-                        Correo = i.child(CORREO_CLIENTE).getValue().toString();
-                        Contraseña = i.child(PASS_CLIENTE).getValue().toString();
+                        Id = i.child(ID_CLIENTE).getValue().toString();
                         Nombre = i.child(NOM_CLIENTE).getValue().toString();
-                        Clientes.add(new Cliente(null, Nombre, Correo, null, null, Contraseña));
+                        Correo = i.child(CORREO_CLIENTE).getValue().toString();
+                        Foto = i.child(FOTO_CLIENTE).getValue().toString();
+                        Telefono = i.child(TEL_CLIENTE).getValue().toString();
+                        Contraseña = i.child(PASS_CLIENTE).getValue().toString();
+                        Clientes.add(new Cliente(Id, Nombre, Correo, Foto, Telefono, Contraseña));
                     }
                     for (int i = 0; i < Clientes.size(); i++)
                         if (correo.equals(Clientes.get(i).getCorreo())) {
                             if (contraseña.equals(Clientes.get(i).getContraseña())) {
                                 if (correo.equals("root"))
                                     startActivity(new Intent(Login.this, MenuPersonal.class));
-                                else startActivity(new Intent(Login.this, MenuCliente.class));
+                                else {
+                                    Id = Clientes.get(i).getId();
+                                    startActivity(new Intent(Login.this, MenuCliente.class));
+                                }
                                 finish();
                                 break;
                             } else {

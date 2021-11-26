@@ -112,6 +112,29 @@
                     android:text="@string/AdministrarAparatos"
                     android:textColor="@android:color/black" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ver_quejas_y_sugerencias" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/boton_redondo_amarillo"
+                    android:onClick="verSugerenciasYQuejas"
+                    android:text="@string/VerQuejas"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

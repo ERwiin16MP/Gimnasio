@@ -8,10 +8,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,7 +35,10 @@ import com.google.firebase.database.ValueEventListener;
 import com.pedba.gimnasiovalhalla.Modelos.Aparato;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 public class FormularioAparato extends AppCompatActivity {
@@ -43,14 +48,19 @@ public class FormularioAparato extends AppCompatActivity {
     public static final String NOM_APARATO = "Nom_aparato";
     public static final String EXISTENCIAS = "Existencias";
     public static final String AREA = "Area";
+    public static final String AREAS = "Areas";
+    public static final String NOM_AREA = "nom_area";
     private static ArrayList<Aparato> Aparatos;
     private final DatabaseReference TablaAparatos = FirebaseDatabase.getInstance().getReference(APARATOS);
+    private final DatabaseReference TablaAreas = FirebaseDatabase.getInstance().getReference(AREAS);
     private Button Boton;
     private Spinner Areas;
     private ListView ListaAparatos;
     private EditText TextBox_Descripcion, TextBox_Cantidad;
     private ProgressDialog Progreso;
-    private int Indice = -1;
+    private int Indice = -1, Contador = 0;
+    private String Areas_Array[];
+    private ArrayAdapter<String> adapter;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -62,6 +72,35 @@ public class FormularioAparato extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         inicializarVistas();
         setMetodoDelBoton(getIntent().getExtras().getInt("Opcion"));
+        setSpinner();
+    }
+
+    private void setSpinner() {
+        TablaAreas.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    Areas_Array = new String[(int) snapshot.getChildrenCount()];
+                    for (DataSnapshot i :
+                            snapshot.getChildren()) {
+                        Areas_Array[Contador] = i.child(NOM_AREA).getValue().toString();
+                        Contador++;
+                    }
+                    List list = new LinkedList();
+                    for (int i = 0; i < Areas_Array.length; i++) {
+                        list.add(Areas_Array[i]);
+                    }
+                    Collections.sort(list);
+                    adapter = new ArrayAdapter<String>(FormularioAparato.this, android.R.layout.simple_spinner_dropdown_item, list);
+                    Areas.setAdapter(adapter);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -78,6 +117,9 @@ public class FormularioAparato extends AppCompatActivity {
                 Boton.setText(getString(R.string.EliminarAparato));
                 Boton.setTextColor(getColor(R.color.white));
                 Boton.setOnClickListener(v -> eliminar());
+                TextBox_Descripcion.setEnabled(false);
+                TextBox_Cantidad.setEnabled(false);
+                Areas.setEnabled(false);
                 setListView();
                 break;
             case 2:
@@ -88,6 +130,9 @@ public class FormularioAparato extends AppCompatActivity {
                 break;
             case 3:
                 Boton.setVisibility(View.GONE);
+                TextBox_Descripcion.setEnabled(false);
+                TextBox_Cantidad.setEnabled(false);
+                Areas.setEnabled(false);
                 setListView();
                 break;
         }

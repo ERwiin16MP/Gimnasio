@@ -26,14 +26,15 @@ import java.util.Map;
 
 public class QuejasSugerencias extends AppCompatActivity {
 
-    private static final String QUEJAS = "Quejas";
-    private static final String SUGERENCIAS = "Sugerencias";
-    private static final String NUM_QUEJA = "Num_Queja";
-    private static final String DESCP_QUEJA = "Descp_Queja";
-    private static final String NUM_SUGE = "Num_Suge";
-    private static final String DESCP_SUGE = "Descp_Suge";
-    private static final String FECHA_QUEJA = "Fecha_Queja";
-    private static final String FECHA_SUG = "Fecha_sugerencia";
+    public static final String QUEJAS = "Quejas";
+    public static final String SUGERENCIAS = "Sugerencias";
+    public static final String NUM_QUEJA = "Num_Queja";
+    public static final String DESCP_QUEJA = "Descp_Queja";
+    public static final String NUM_SUGE = "Num_Suge";
+    public static final String DESCP_SUGE = "Descp_Suge";
+    public static final String FECHA_QUEJA = "Fecha_Queja";
+    public static final String FECHA_SUG = "Fecha_sugerencia";
+    public static final String CLIENTE_ID = "cliente_id";
     String Fecha;
     private RadioButton RB_Queja;
     private EditText TextBox_Texto;
@@ -89,6 +90,7 @@ public class QuejasSugerencias extends AppCompatActivity {
             Datos.put(DESCP_SUGE, Texto);
             Datos.put(FECHA_SUG, Fecha);
         }
+        Datos.put(CLIENTE_ID, Login.Id);
         BaseDeDatosQuejasOSugerencias.child(Id).setValue(Datos).addOnCompleteListener(task -> {
             if (task.isSuccessful())
                 Progreso.dismiss();

@@ -96,7 +96,6 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
                     android:background="@android:color/white"
-                    android:entries="@array/Areas"
                     android:paddingVertical="10dp" />
             </LinearLayout>
 

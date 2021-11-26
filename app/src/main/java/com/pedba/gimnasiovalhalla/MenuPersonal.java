@@ -1,10 +1,10 @@
 package com.pedba.gimnasiovalhalla;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuPersonal extends AppCompatActivity {
 
@@ -24,5 +24,9 @@ public class MenuPersonal extends AppCompatActivity {
 
     public void AdministrarAparatos(View view) {
         startActivity(new Intent(this, AdministrarAparatos.class));
+    }
+
+    public void verSugerenciasYQuejas(View view) {
+        startActivity(new Intent(this, VerQuejasYSugerencias.class));
     }
 }

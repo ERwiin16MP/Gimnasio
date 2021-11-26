@@ -22,11 +22,14 @@
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/administrar_cliente.xml" value="0.18055555555555555" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/contratar_clase.xml" value="0.25" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/elige_plan_de_pago.xml" value="0.25" />
-        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/formulario_aparato.xml" value="0.22" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/formulario_aparato.xml" value="0.18703703703703703" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/formulario_clase.xml" value="0.18981481481481483" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/formulario_cliente.xml" value="0.17777777777777778" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/fragment_quejas.xml" value="0.2" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/fragment_sugerencias.xml" value="0.1859375" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/item.xml" value="0.1859375" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/item_clase.xml" value="0.17777777777777778" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/item_qs.xml" value="0.2" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/login.xml" value="0.25" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/login_cliente.xml" value="0.175" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/login_personal.xml" value="0.25" />
@@ -35,6 +38,7 @@
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/ogin_personal.xml" value="0.2" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/proporciona_tarjeta.xml" value="0.17777777777777778" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/quejas_sugerencias.xml" value="0.25" />
+        <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/quejas_y_sugerencias.xml" value="0.2" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/registrarse.xml" value="0.18611111111111112" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/layout/rentar_aparatos.xml" value="0.33" />
         <entry key="..\:/Android studio/Gimnasio Valhalla/app/src/main/res/mipmap-anydpi-v26/icono_round.xml" value="0.21614583333333334" />
